@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - aws s3 cp s3://ecr-integration-test/creds/.docker.key .docker.key
+      - aws s3 cp s3://ecr-integration-test-us-west-1/creds/.docker.key .docker.key
       - docker login -u slimslenderslacks --password-stdin < .docker.key
       - rm .docker.key
       - docker build -t base:latest --label "org.opencontainers.image.revision=$CODEBUILD_RESOLVED_SOURCE_VERSION" --label "org.opencontainers.image.source=base/Dockerfile" -f base/Dockerfile .
