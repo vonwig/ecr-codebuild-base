@@ -1,3 +1,3 @@
-FROM ubuntu:devel@sha256:f154feaf13b51d16e2b4b5575d69abc808da40c4b80e3a5055aaa4bcc5099d5b
+FROM ubuntu:devel@sha256:d2d9a7a7b18ecb6a33befb2ca9d386462721b6523f165985719756778046b254
 RUN echo '{:version 9}' > dog.json
 CMD ["cat", "dog.json"]
